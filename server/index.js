@@ -46,8 +46,8 @@ let employees = [
         age: 25,
     },
 ]
-app.get('/employee', (req, res) => {
-       
+app.get('/employees', (req, res) => {
+ 
     res.status(200).send(employees)
 }),
 

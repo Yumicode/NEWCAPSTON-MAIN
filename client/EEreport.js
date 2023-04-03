@@ -1,11 +1,3 @@
-// function newDoc() {
-//     window.location.assign("http://127.0.0.1:5500/client/3-account.html")
-//   }
-
-// function newDoc() {
-//     window.location.assign("http://127.0.0.1:5500/client/3-account.html")
-//   }
-
 //submit buttons
 const getSubmit = document.getElementById('getSubmit');
 const getParamsSubmit = document.getElementById('getParamsSubmit');  
@@ -37,3 +29,20 @@ getQuarySubmit.addEventListener('click', () => {
         .then(res => addToView(res.data))
 });
 
+getSubmit.addEventListener('click', () => {
+    axios   
+        .get('http://localhost:4040/employees')
+        .then(res => addToView(res.data))
+});
+
+getParamsSubmit.addEventListener('click', () => {
+    axios   
+        .get(`http://localhost:4040/employees/${paramsInput.value}`)
+        .then(res => addToView(res.data))
+});
+
+getQuarySubmit.addEventListener('click', () => {
+    axios   
+        .get(`http://localhost:4040/employees${quaryInput.value}`)
+        .then(res => addToView(res.data))
+});
