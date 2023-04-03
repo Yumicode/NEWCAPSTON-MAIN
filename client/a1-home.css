@@ -1,0 +1,20 @@
+img {
+
+    max-width: 800px;
+}
+
+p {
+font-size: large;
+
+}
+
+input[type=submit]{
+    background-color: blueviolet;
+    color: white;
+}
+
+body {
+
+    background-color: aquamarine;
+}
+
